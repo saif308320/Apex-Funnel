@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Apex Funnel — Turn Attention Into Revenue</title>
+<meta name="description" content="A premium, high-converting sales funnel system built to move strangers through Awareness, Interest, Decision and Action — automatically.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#06040b">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="./favcion.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favcion.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./favcion.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  html{ color-scheme: dark; background:#06040b; }
+  body{ background:#06040b; }
+  /* ============================================================
+     APEX FUNNEL — v3 — Premium + mobile popup pass
+     ============================================================ */
+
+  :root{
+    --void:#06040b;
+    --void-2:#0c0817;
+    --void-3:#120c20;
+    --panel:#0e0a1a;
+    --gold:#e8c274;
+    --gold-bright:#f8e2ab;
+    --gold-deep:#a9772f;
+    --violet:#8b5cf6;
+    --violet-deep:#4c1d95;
+    --violet-soft:#b39dfb;
+    --neon:#ff3ea5;
+    --ink:#f5f0e8;
+    --ink-dim:#cbc2e6;
+    --ink-faint:#8d84ac;
+    --line:#ffffff14;
+    --line-2:#ffffff0a;
+    --display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', 'Cascadia Mono', Consolas, monospace;
+    --ease: cubic-bezier(.16,.84,.44,1);
+    --shadow-lg: 0 30px 80px -30px #000000cc, 0 2px 0 #ffffff08 inset;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important;}
+  }
+
+  body{
+    background-color:#06040b;
+    background-image:
+      radial-gradient(52vw 52vh at 12% -4%, #4c1d953d, transparent 62%),
+      radial-gradient(46vw 46vh at 108% 8%, #a9772f2e, transparent 62%),
+      radial-gradient(60vw 60vh at 50% 115%, #8b5cf624, transparent 62%);
+    background-repeat:no-repeat;
+    color:var(--ink);
+    font-family:var(--body);
+    line-height:1.6;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    position:relative;
+    min-height:100vh;
+  }
+
+  body::after{
+    content:'';
+    position:absolute; inset:0; z-index:2; pointer-events:none; opacity:.05; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  section{position:relative; z-index:1;}
+  ::selection{background:var(--violet); color:#fff;}
+  svg{display:block;}
+
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  .eyebrow{
+    font-family:var(--mono); font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--gold); display:inline-flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{content:''; width:22px; height:1px; background:linear-gradient(90deg,var(--gold),transparent);}
+
+  h1,h2,h3{font-family:var(--display); font-weight:700; letter-spacing:-.01em; line-height:1.05;}
+  .grad-text{
+    background:linear-gradient(100deg, var(--gold-bright) 0%, var(--gold) 35%, var(--violet-soft) 75%, var(--violet) 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    background-size:200% auto;
+    animation:gradShift 6s ease-in-out infinite;
+  }
+  @keyframes gradShift{ 0%,100%{background-position:0% center;} 50%{background-position:100% center;} }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:var(--mono); font-size:13px; letter-spacing:.06em; text-transform:uppercase;
+    padding:16px 30px; border-radius:4px; cursor:pointer; border:1px solid transparent;
+    transition:transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+    will-change:transform;
+  }
+  .btn-primary{
+    background:linear-gradient(120deg, var(--gold-bright), var(--gold-deep));
+    color:#1a1206; font-weight:700; position:relative; overflow:hidden;
+    box-shadow:0 10px 34px -10px #e8c27488, 0 0 0 1px #ffffff26 inset;
+    animation:btnGlow 3.2s ease-in-out infinite;
+  }
+  @keyframes btnGlow{
+    0%,100%{ box-shadow:0 10px 34px -10px #e8c27488, 0 0 0 1px #ffffff26 inset; }
+    50%{ box-shadow:0 10px 44px -6px #e8c274c0, 0 0 0 1px #ffffff33 inset; }
+  }
+  .btn-primary::before{
+    content:''; position:absolute; top:0; left:-60%; width:40%; height:100%;
+    background:linear-gradient(120deg, transparent, #ffffff70, transparent);
+    transform:skewX(-20deg); transition:left .6s var(--ease);
+  }
+  .btn-primary:hover::before{ left:130%; }
+  .btn-primary:hover{transform:translateY(-3px); box-shadow:0 16px 44px -10px #e8c274b0, 0 0 0 1px #ffffff33 inset; animation-play-state:paused;}
+  .btn-ghost{
+    background:#ffffff08; color:var(--ink); border-color:var(--line); backdrop-filter:blur(6px);
+  }
+  .btn-ghost:hover{border-color:#ffffff40; transform:translateY(-3px);}
+  .btn svg{width:14px; height:14px;}
+  .btn:active{transform:translateY(-1px) scale(.98);}
+  .btn.is-loading{pointer-events:none; opacity:.75;}
+
+  /* ---------------- NAV ---------------- */
+  header.nav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    padding:22px 0; transition:background .4s var(--ease), border-color .4s var(--ease), padding .4s var(--ease);
+    border-bottom:1px solid transparent;
+    padding-top:max(22px, env(safe-area-inset-top));
+  }
+  header.nav.scrolled{
+    background:#06040be9; backdrop-filter:blur(16px); border-color:var(--line); padding:15px 0;
+    padding-top:max(15px, env(safe-area-inset-top));
+  }
+  .scroll-progress{ position:fixed; top:0; left:0; height:2px; width:0%; z-index:110; background:linear-gradient(90deg,var(--gold),var(--violet),var(--neon)); transition:width .1s linear; }
+  .trusted{ margin-top:54px; padding-top:34px; border-top:1px solid var(--line); }
+  .trusted span{ font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); display:block; margin-bottom:18px; }
+  .trusted-logos{ display:flex; gap:34px; flex-wrap:wrap; align-items:center; }
+  .trusted-logos b{ font-family:var(--display); font-style:italic; font-size:19px; color:var(--ink-faint); opacity:.55; letter-spacing:.01em; transition:opacity .3s; }
+  .trusted-logos b:hover{ opacity:1; color:var(--gold); }
+  .nav-inner{display:flex; align-items:center; justify-content:space-between;}
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand-mark{width:30px; height:30px;}
+  .logo{font-family:var(--display); font-style:italic; font-size:21px; font-weight:700;}
+  .logo span{color:var(--gold);}
+  .nav-links{display:flex; gap:34px; font-size:14px; color:var(--ink-dim);}
+  .nav-links a{transition:color .25s; position:relative; padding-bottom:4px;}
+  .nav-links a::after{content:''; position:absolute; left:0; right:100%; bottom:0; height:1px; background:linear-gradient(90deg,var(--gold),var(--violet-soft)); transition:right .3s var(--ease);}
+  .nav-links a:hover::after{right:0;}
+  .nav-links a:hover{color:var(--gold);}
+  .nav-cta{display:flex; align-items:center; gap:18px;}
+  .burger{display:none; width:24px; height:18px; position:relative; cursor:pointer; background:none; border:0;}
+  .burger span{position:absolute; left:0; right:0; height:2px; background:var(--ink); transition:.3s;}
+  .burger span:nth-child(1){top:0;} .burger span:nth-child(2){top:8px;} .burger span:nth-child(3){top:16px;}
+  .burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+  .burger.open span:nth-child(2){opacity:0;}
+  .burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+
+  /* ---------------- HERO ---------------- */
+  .hero{ min-height:100svh; display:flex; align-items:center; padding:150px 0 90px; }
+  .hero-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;}
+  .hero h1{font-size:clamp(32px,4.8vw,58px); margin:22px 0 22px;}
+  .hero p.lead{font-size:17.5px; color:var(--ink-dim); max-width:460px; margin-bottom:34px;}
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:44px;}
+  .hero-stats{display:flex; gap:36px; flex-wrap:wrap;}
+  .hstat b{font-family:var(--mono); font-size:23px; color:var(--gold); display:block;}
+  .hstat span{font-size:12px; color:var(--ink-faint); letter-spacing:.04em;}
+
+  .hero-copy, .mock-wrap{ opacity:0; transform:translateY(24px); transition:opacity .9s var(--ease), transform .9s var(--ease); }
+  .hero-copy.in-view{ opacity:1; transform:translateY(0); }
+  .mock-wrap.in-view{ opacity:1; transform:translateY(0); transition-delay:.15s; }
+
+  /* ---- Dashboard mockup (hero right) ---- */
+  .mock-wrap{ perspective:1600px; }
+  .mock{
+    position:relative; border-radius:16px; background:linear-gradient(155deg,#14102400,#0a0715);
+    border:1px solid #ffffff17; box-shadow:var(--shadow-lg);
+    transform:rotateY(-12deg) rotateX(5deg) rotateZ(1deg);
+    transition:transform .5s var(--ease);
+    overflow:hidden;
+  }
+  .mock-wrap:hover .mock{ transform:rotateY(-7deg) rotateX(3deg) rotateZ(.5deg) translateY(-4px); }
+  .mock-bar{ display:flex; align-items:center; gap:8px; padding:14px 18px; border-bottom:1px solid var(--line); background:#ffffff05;}
+  .mock-dot{width:9px; height:9px; border-radius:50%; background:#ffffff20;}
+  .mock-dot:nth-child(1){background:#ff5f57;} .mock-dot:nth-child(2){background:#febc2e;} .mock-dot:nth-child(3){background:#28c840;}
+  .mock-url{margin-left:12px; font-family:var(--mono); font-size:11px; color:var(--ink-faint); background:#ffffff08; padding:4px 12px; border-radius:100px;}
+  .mock-body{padding:26px;}
+  .mock-head{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:20px;}
+  .mock-head h4{font-family:var(--body); font-size:13px; color:var(--ink-faint); letter-spacing:.05em; text-transform:uppercase;}
+  .mock-head b{font-family:var(--mono); color:var(--gold); font-size:12px; display:inline-flex; align-items:center;}
+  .mock-head b#mockLive::before{content:''; display:inline-block; width:6px; height:6px; border-radius:50%; background:#38d99b; margin-right:6px; box-shadow:0 0 8px 2px #38d99b; animation:livePulse 1.6s ease-in-out infinite;}
+  @keyframes livePulse{ 0%,100%{opacity:1;} 50%{opacity:.35;} }
+  .mock-funnelbars{display:flex; flex-direction:column; gap:10px; margin-bottom:22px;}
+  .mbar-row{display:grid; grid-template-columns:78px 1fr 46px; align-items:center; gap:12px;}
+  .mbar-row span:first-child{font-family:var(--mono); font-size:11px; color:var(--ink-faint);}
+  .mbar-row span:last-child{font-family:var(--mono); font-size:11px; color:var(--gold); text-align:right;}
+  .mbar-track{height:9px; border-radius:5px; background:#ffffff0a; overflow:hidden; position:relative;}
+  .mbar-fill{height:100%; border-radius:5px; background:linear-gradient(90deg,var(--gold),var(--violet)); width:0%; transition:width 1.4s var(--ease); position:relative; overflow:hidden;}
+  .mbar-fill::after{content:''; position:absolute; inset:0; background:linear-gradient(90deg,transparent,#ffffff60,transparent); width:30%; animation:barShine 2.4s linear infinite;}
+  @keyframes barShine{ 0%{transform:translateX(-120%);} 100%{transform:translateX(420%);} }
+  .mock-stats{display:grid; grid-template-columns:repeat(3,1fr); gap:12px;}
+  .mstat{background:#ffffff06; border:1px solid var(--line-2); border-radius:10px; padding:14px;}
+  .mstat b{display:block; font-family:var(--mono); font-size:18px; color:var(--ink);}
+  .mstat span{font-size:10.5px; color:var(--ink-faint); letter-spacing:.03em;}
+  .mstat.up b::after{content:' ▲'; color:#38d99b; font-size:10px;}
+  .mock-glow{position:absolute; width:260px; height:260px; border-radius:50%; background:radial-gradient(circle,#8b5cf655,transparent 70%); top:-90px; right:-90px; z-index:-1; filter:blur(2px);}
+
+  /* ---------------- VALUE PROP ---------------- */
+  .band{padding:110px 0;}
+  .band-head{max-width:640px; margin:0 auto 64px; text-align:center;}
+  .band-head h2{font-size:clamp(29px,3.6vw,42px); margin-top:16px;}
+  .band-head p{color:var(--ink-dim); font-size:16px; margin-top:16px;}
+
+  .value-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:var(--shadow-lg);}
+  .value-card{background:var(--panel); padding:40px 34px; transition:background .3s;}
+  .value-card:hover{background:var(--void-3);}
+  .value-card .vicon{width:38px; height:38px; margin-bottom:20px; color:var(--gold);}
+  .value-card .vnum{font-family:var(--mono); color:var(--ink-faint); font-size:12px; letter-spacing:.1em;}
+  .value-card h3{font-family:var(--body); font-size:18.5px; margin:14px 0 10px; font-weight:600;}
+  .value-card p{color:var(--ink-faint); font-size:14.5px;}
+
+  /* ---------------- FUNNEL 3D + STAGES ---------------- */
+  .stages{padding:110px 0 130px; background:linear-gradient(180deg, transparent, #0d081750, transparent);}
+  .funnel-stage{ perspective:1400px; height:280px; display:flex; align-items:center; justify-content:center; margin:0 auto 30px;}
+  .funnel-3d{ position:relative; width:260px; height:230px; transform-style:preserve-3d; transform:rotateX(58deg) rotateZ(-34deg); transition:transform .6s var(--ease); }
+  .fring{ position:absolute; left:50%; top:0; border-radius:50%; transform-style:preserve-3d; border:1px solid #ffffff30; box-shadow:0 0 24px -4px currentColor, inset 0 0 30px -6px currentColor; animation:pulseRing 4.5s ease-in-out infinite; }
+  @keyframes pulseRing{ 0%,100%{filter:brightness(1);} 50%{filter:brightness(1.35);} }
+  .r1{width:260px; height:260px; margin-left:-130px; top:0; color:#f7dfa0; background:radial-gradient(circle at 40% 35%, #f7dfa055, transparent 70%);}
+  .r2{width:200px; height:200px; margin-left:-100px; top:60px; color:#e8c274; background:radial-gradient(circle at 40% 35%, #e8c27455, transparent 70%); animation-delay:.3s;}
+  .r3{width:145px; height:145px; margin-left:-72px; top:120px; color:#c9a3f0; background:radial-gradient(circle at 40% 35%, #c9a3f055, transparent 70%); animation-delay:.6s;}
+  .r4{width:88px; height:88px; margin-left:-44px; top:184px; color:#8b5cf6; background:radial-gradient(circle at 40% 35%, #8b5cf680, transparent 70%); animation-delay:.9s;}
+  .r5{width:38px; height:38px; margin-left:-19px; top:240px; color:#ff3ea5; background:radial-gradient(circle at 40% 35%, #ff3ea5aa, transparent 70%); animation-delay:1.2s; box-shadow:0 0 40px 4px #ff3ea599;}
+  .fparticle{ position:absolute; left:50%; top:-10px; width:5px; height:5px; margin-left:-3px; border-radius:50%; background:var(--gold-bright); box-shadow:0 0 10px 2px var(--gold-bright); animation:dropThrough 3.2s linear infinite; }
+  @keyframes dropThrough{
+    0%{ top:-10px; transform:scale(1); opacity:1; background:#f7dfa0; box-shadow:0 0 10px 2px #f7dfa0;}
+    70%{opacity:1;}
+    100%{ top:270px; transform:scale(.3); opacity:0; background:#ff3ea5; box-shadow:0 0 14px 4px #ff3ea5;}
+  }
+
+  .stage-row{
+    display:grid; grid-template-columns:.5fr 1fr; gap:50px; align-items:center;
+    padding:56px 0; border-bottom:1px solid var(--line);
+    opacity:0; transform:translateY(40px); transition:opacity .8s var(--ease), transform .8s var(--ease);
+  }
+  .stage-row.in-view{opacity:1; transform:translateY(0);}
+  .stage-row:last-child{border-bottom:none;}
+  .stage-row:nth-child(even){grid-template-columns:1fr .5fr;}
+  .stage-row:nth-child(even) .stage-visual{order:2;}
+  .stage-num{
+    font-family:var(--display); font-style:italic; font-size:88px; line-height:1;
+    background:linear-gradient(160deg,var(--gold-bright),var(--violet));
+    -webkit-background-clip:text; background-clip:text; color:transparent; opacity:.5;
+  }
+  .stage-copy .eyebrow{margin-bottom:14px;}
+  .stage-copy h3{font-size:clamp(23px,2.8vw,30px); font-family:var(--display); margin-bottom:14px;}
+  .stage-copy p{color:var(--ink-dim); font-size:15px; max-width:460px;}
+  .stage-tags{display:flex; gap:10px; margin-top:18px; flex-wrap:wrap;}
+  .stage-tags span{font-family:var(--mono); font-size:11px; letter-spacing:.06em; color:var(--ink-faint); border:1px solid var(--line); padding:6px 12px; border-radius:100px; transition:border-color .25s, color .25s;}
+  .stage-tags span:hover{border-color:var(--gold); color:var(--gold);}
+
+  .stage-visual{
+    border-radius:14px; overflow:hidden; border:1px solid var(--line); background:var(--panel);
+    box-shadow:var(--shadow-lg);
+    transition:transform .4s var(--ease), border-color .4s var(--ease);
+  }
+  .stage-visual:hover{ transform:translateY(-6px); border-color:#e8c27455; }
+  .sv-bar{display:flex; align-items:center; gap:6px; padding:10px 14px; border-bottom:1px solid var(--line); background:#ffffff05;}
+  .sv-dot{width:7px; height:7px; border-radius:50%; background:#ffffff20;}
+  .sv-body{padding:22px; display:flex; flex-direction:column; gap:12px; min-height:150px; justify-content:center;}
+  .sv-metric{display:flex; align-items:baseline; gap:10px;}
+  .sv-metric b{font-family:var(--mono); font-size:32px; color:var(--plate-a,#e8c274);}
+  .sv-metric span{font-size:12px; color:var(--ink-faint);}
+  .sv-track{height:8px; border-radius:5px; background:#ffffff0a; overflow:hidden;}
+  .sv-fill{height:100%; border-radius:5px; background:linear-gradient(90deg,var(--plate-a,#e8c274),var(--plate-b,#8b5cf6)); width:0; transition:width 1.2s var(--ease);}
+  .sv-rows{display:flex; gap:6px; align-items:flex-end; height:52px; margin-top:4px;}
+  .sv-rows i{flex:1; border-radius:3px 3px 0 0; background:linear-gradient(180deg,var(--plate-a,#e8c274),transparent); opacity:.85; transform:scaleY(0); transform-origin:bottom; transition:transform .8s var(--ease);}
+  .stage-row.in-view .sv-rows i{transform:scaleY(1);}
+  .stage-row.in-view .sv-fill[data-target]{width:var(--target-w);}
+
+  .s1{--plate-a:#f7dfa0; --plate-b:#e8c274;} .s2{--plate-a:#e8c274; --plate-b:#a78bfa;}
+  .s3{--plate-a:#a78bfa; --plate-b:#8b5cf6;} .s4{--plate-a:#ff3ea5; --plate-b:#8b5cf6;}
+
+  /* ---------------- FEATURES ---------------- */
+  .feat-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
+  .feat-card{
+    padding:32px 28px; border:1px solid var(--line); border-radius:14px; background:var(--panel);
+    transition:transform .35s var(--ease), border-color .35s var(--ease), box-shadow .35s var(--ease);
+    opacity:0; transform:translateY(24px);
+  }
+  .feat-card.in-view{opacity:1; transform:translateY(0); transition:opacity .6s var(--ease), transform .6s var(--ease), border-color .35s var(--ease), box-shadow .35s var(--ease);}
+  .feat-card:hover{transform:translateY(-6px); border-color:#e8c27455; box-shadow:var(--shadow-lg);}
+  .feat-icon{
+    width:42px; height:42px; border-radius:11px; margin-bottom:20px;
+    background:linear-gradient(135deg,var(--gold),var(--violet)); display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 20px -8px #8b5cf680;
+  }
+  .feat-icon svg{width:20px; height:20px; color:#140d21;}
+  .feat-card h3{font-family:var(--body); font-size:16.5px; font-weight:600; margin-bottom:8px;}
+  .feat-card p{font-size:13.5px; color:var(--ink-faint);}
+
+  /* ---------------- TESTIMONIALS ---------------- */
+  .test-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .test-card{
+    padding:34px; border-radius:16px; background:linear-gradient(150deg,#ffffff09,#ffffff02);
+    border:1px solid var(--line); position:relative; box-shadow:var(--shadow-lg);
+    transition:transform .4s var(--ease), border-color .4s var(--ease);
+  }
+  .test-card:hover{transform:translateY(-5px); border-color:#8b5cf655;}
+  .test-card .quote-mark{position:absolute; top:20px; right:26px; width:30px; height:30px; opacity:.18; color:var(--gold);}
+  .test-card .stars{color:var(--gold); font-size:13px; letter-spacing:2px; margin-bottom:16px;}
+  .test-card p{font-size:14.5px; color:var(--ink-dim); margin-bottom:22px; position:relative; z-index:1;}
+  .test-who{display:flex; align-items:center; gap:12px;}
+  .test-avatar{
+    width:42px; height:42px; border-radius:50%; position:relative; flex-shrink:0;
+    background:conic-gradient(from 220deg, var(--gold), var(--violet), var(--neon), var(--gold));
+    display:flex; align-items:center; justify-content:center; padding:2px;
+  }
+  .test-avatar i{
+    width:100%; height:100%; border-radius:50%; background:var(--void-3);
+    display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-weight:700; font-size:13px; color:var(--gold-bright); font-style:normal;
+  }
+  .test-who b{display:block; font-size:14px;} .test-who span{font-size:12px; color:var(--ink-faint);}
+
+  .proof-strip{display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; margin-top:70px; padding-top:50px; border-top:1px solid var(--line);}
+  .proof-strip div{text-align:center; flex:1; min-width:120px;}
+  .proof-strip b{display:block; font-family:var(--mono); font-size:28px; color:var(--gold);}
+  .proof-strip span{font-size:12px; color:var(--ink-faint); letter-spacing:.03em;}
+
+  /* ---------------- CTA / FORM ---------------- */
+  .cta-band{padding:100px 0;}
+  .cta-panel{
+    border-radius:24px; padding:70px 60px; position:relative; overflow:hidden;
+    background:linear-gradient(140deg, #140e24, #0a0715 60%);
+    border:1px solid #ffffff1a; box-shadow:var(--shadow-lg);
+  }
+  .cta-panel::before{ content:''; position:absolute; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle, #8b5cf655, transparent 70%); top:-220px; right:-160px; pointer-events:none; }
+  .cta-panel::after{ content:''; position:absolute; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle, #e8c27444, transparent 70%); bottom:-220px; left:-140px; pointer-events:none; }
+  .cta-inner{display:grid; grid-template-columns:1fr .85fr; gap:50px; position:relative; z-index:1;}
+  .cta-inner h2{font-size:clamp(27px,3.4vw,38px); margin:16px 0 18px;}
+  .cta-inner p{color:var(--ink-dim); max-width:420px; font-size:15px;}
+  .cta-badges{display:flex; gap:22px; margin-top:30px; flex-wrap:wrap;}
+  .cta-badge{display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--ink-faint);}
+  .cta-badge svg{width:16px; height:16px; color:var(--gold);}
+
+  form.lead-form{display:flex; flex-direction:column; gap:14px;}
+  .field{display:flex; flex-direction:column; gap:7px;}
+  .field label{font-family:var(--mono); font-size:11px; letter-spacing:.08em; color:var(--ink-faint); text-transform:uppercase;}
+  .field input{
+    background:#ffffff0a; border:1px solid var(--line); border-radius:9px; padding:14px 16px;
+    color:var(--ink); font-family:var(--body); font-size:16px; outline:none;
+    transition:border-color .25s, background .25s;
+  }
+  .field input:focus{border-color:var(--gold); background:#ffffff10;}
+  form.lead-form .btn{justify-content:center; width:100%; margin-top:6px;}
+  .form-note{font-size:11.5px; color:var(--ink-faint); text-align:center; margin-top:4px;}
+  .form-success{
+    display:none; text-align:center; padding:20px; border:1px solid #e8c27455; border-radius:10px;
+    font-family:var(--mono); font-size:13px; color:var(--gold); margin-top:10px;
+  }
+
+  /* ---------------- LEAD MODAL (popup) ---------------- */
+  .lead-modal-overlay{
+    position:fixed; inset:0; z-index:200; background:#06040bcc; backdrop-filter:blur(10px);
+    display:flex; align-items:center; justify-content:center; padding:20px;
+    opacity:0; pointer-events:none; transition:opacity .35s var(--ease);
+  }
+  .lead-modal-overlay.open{opacity:1; pointer-events:all;}
+  .lead-modal{
+    width:100%; max-width:440px; border-radius:20px; position:relative; overflow:hidden;
+    background:linear-gradient(150deg,#140e24,#0a0715 65%);
+    border:1px solid #ffffff1e; box-shadow:0 40px 100px -30px #000000e0, 0 0 0 1px #ffffff10 inset;
+    padding:40px 34px 32px; transform:scale(.9) translateY(24px); transition:transform .4s var(--ease);
+    max-height:92vh; overflow-y:auto;
+  }
+  .lead-modal-overlay.open .lead-modal{transform:scale(1) translateY(0);}
+  .lead-modal::before{content:''; position:absolute; width:320px; height:320px; border-radius:50%; background:radial-gradient(circle,#8b5cf650,transparent 70%); top:-160px; right:-140px; pointer-events:none;}
+  .lead-modal-close{
+    position:absolute; top:16px; right:16px; width:34px; height:34px; border-radius:50%;
+    background:#ffffff0d; border:1px solid var(--line); color:var(--ink-dim); font-size:18px; line-height:1;
+    display:flex; align-items:center; justify-content:center; cursor:pointer; transition:.25s;
+  }
+  .lead-modal-close:hover{background:#ffffff1a; color:var(--gold); transform:rotate(90deg);}
+  .lead-modal h3{font-size:24px; margin-bottom:8px; position:relative; z-index:1;}
+  .lead-modal p.modal-sub{color:var(--ink-faint); font-size:13.5px; margin-bottom:24px; position:relative; z-index:1;}
+
+  /* mobile sticky CTA bar */
+  .sticky-cta{
+    display:none; position:fixed; left:0; right:0; bottom:0; z-index:95;
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    background:#06040bf2; backdrop-filter:blur(14px); border-top:1px solid var(--line);
+    transform:translateY(110%); transition:transform .4s var(--ease);
+  }
+  .sticky-cta.show{transform:translateY(0);}
+  .sticky-cta .btn{width:100%; justify-content:center;}
+
+  /* ---------------- FOOTER ---------------- */
+  footer{padding:70px 0 40px; border-top:1px solid var(--line);}
+  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:50px;}
+  .foot-logo{display:flex; align-items:center; gap:10px; font-family:var(--display); font-style:italic; font-size:21px; margin-bottom:14px;}
+  .foot-logo span{color:var(--gold);}
+  .foot-grid p{color:var(--ink-faint); font-size:13.5px; max-width:280px;}
+  .foot-col h4{font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:16px;}
+  .foot-col a{display:block; font-size:14px; color:var(--ink-dim); margin-bottom:11px; transition:color .2s;}
+  .foot-col a:hover{color:var(--gold);}
+  .foot-bottom{display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:12.5px; color:var(--ink-faint); padding-top:30px; border-top:1px solid var(--line);}
+  .foot-social{display:flex; gap:14px;}
+  .foot-social a{width:36px; height:36px; border:1px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; transition:.25s;}
+  .foot-social a svg{width:15px; height:15px;}
+  .foot-social a:hover{border-color:var(--gold); color:var(--gold); transform:translateY(-3px);}
+
+  /* ---------------- responsive ---------------- */
+  @media (max-width:980px){
+    .nav-links{display:none;}
+    .nav-cta .btn-primary{display:none;}
+    .burger{display:block;}
+    .hero-grid{grid-template-columns:1fr;}
+    .hero p.lead{margin-left:auto; margin-right:auto;}
+    .hero .hero-copy{text-align:center;}
+    .hero-actions, .hero-stats{justify-content:center;}
+    .mock-wrap{max-width:460px; margin:0 auto;}
+    .value-grid{grid-template-columns:1fr;}
+    .feat-grid{grid-template-columns:repeat(2,1fr);}
+    .test-grid{grid-template-columns:1fr;}
+    .stage-row, .stage-row:nth-child(even){grid-template-columns:1fr; text-align:left;}
+    .stage-row:nth-child(even) .stage-visual{order:0;}
+    .cta-inner{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+    .sticky-cta{display:block;}
+    body{padding-bottom:76px;}
+  }
+  @media (max-width:600px){
+    .wrap{padding:0 20px;}
+    .hero{padding:120px 0 60px;}
+    .feat-grid{grid-template-columns:1fr;}
+    .cta-panel{padding:44px 22px;}
+    .foot-grid{grid-template-columns:1fr;}
+    .mock{transform:none;}
+    .mock-wrap:hover .mock{transform:none;}
+    .funnel-stage{height:220px; transform:scale(.82);}
+    .stage-num{font-size:56px;}
+    .lead-modal{padding:32px 22px 26px;}
+    .hero-stats{gap:22px;}
+    .proof-strip{gap:30px 18px;}
+  }
+
+  .mobile-drawer{
+    position:fixed; inset:0; z-index:90; background:#06040bf5; backdrop-filter:blur(10px);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:30px;
+    opacity:0; pointer-events:none; transition:opacity .35s var(--ease);
+  }
+  .mobile-drawer.open{opacity:1; pointer-events:all;}
+  .mobile-drawer a{font-family:var(--display); font-size:26px; font-style:italic;}
+  .mobile-drawer .btn{margin-top:10px;}
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="siteNav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none">
+        <path d="M4 5H28L20 16V26L12 22V16L4 5Z" fill="url(#navGrad)" stroke="#f8e2ab" stroke-width="1" stroke-linejoin="round"/>
+        <defs><linearGradient id="navGrad" x1="4" y1="5" x2="28" y2="26" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#f8e2ab"/><stop offset="1" stop-color="#8b5cf6"/>
+        </linearGradient></defs>
+      </svg>
+      <span class="logo">Apex<span>Funnel</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#value">Overview</a>
+      <a href="#stages">The Funnel</a>
+      <a href="#features">Features</a>
+      <a href="#proof">Results</a>
+      <a href="#get-started">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <button type="button" class="btn btn-primary" id="openLeadModalNav" style="padding:12px 22px;">Book a Demo</button>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="drawer">
+  <a href="#value">Overview</a>
+  <a href="#stages">The Funnel</a>
+  <a href="#features">Features</a>
+  <a href="#proof">Results</a>
+  <a href="#get-started">Contact</a>
+  <button type="button" class="btn btn-primary" id="openLeadModalDrawer">Book a Demo</button>
+</div>
+
+<!-- ================= LEAD MODAL (popup) ================= -->
+<div class="lead-modal-overlay" id="leadModalOverlay">
+  <div class="lead-modal" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="leadModalTitle">
+    <button type="button" class="lead-modal-close" id="leadModalClose" aria-label="Close">&times;</button>
+    <span class="eyebrow">Book a Demo</span>
+    <h3 id="leadModalTitle">Let's map your funnel.</h3>
+    <p class="modal-sub">Drop your details — we'll reply within one business day with next steps.</p>
+    <form class="lead-form" id="modalLeadForm">
+      <div class="field">
+        <label for="mfname">Full Name</label>
+        <input type="text" id="mfname" name="name" placeholder="Your name" required>
+      </div>
+      <div class="field">
+        <label for="mfemail">Email Address</label>
+        <input type="email" id="mfemail" name="email" placeholder="you@company.com" required>
+      </div>
+      <div class="field">
+        <label for="mfphone">WhatsApp Number</label>
+        <input type="tel" id="mfphone" name="phone" placeholder="+92 3xx xxxxxxx">
+      </div>
+      <button type="submit" class="btn btn-primary">Request My Funnel
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </button>
+      <div class="form-success" id="modalFormSuccess">✓ Thanks — we've received your details and will be in touch shortly.</div>
+      <p class="form-note">No spam. Your details are used only to contact you about this request.</p>
+    </form>
+  </div>
+</div>
+
+<!-- mobile sticky CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <button type="button" class="btn btn-primary" id="openLeadModalSticky">Book a Demo
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+  </button>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Precision Conversion System</span>
+      <h1>Turn cold traffic into <span class="grad-text">closed revenue</span> — on autopilot.</h1>
+      <p class="lead">Apex Funnel is the four-stage architecture premium brands use to move a stranger from first click to paying customer, without losing them in the middle.</p>
+      <div class="hero-actions">
+        <a href="#get-started" class="btn btn-primary">Get Your Funnel Built
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#stages" class="btn btn-ghost">See How It Works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><b data-count="3.4" data-suffix="×">0×</b><span>Avg. conversion lift</span></div>
+        <div class="hstat"><b data-count="48" data-suffix=" hrs">0 hrs</b><span>Time to launch</span></div>
+        <div class="hstat"><b data-count="210" data-suffix="+">0+</b><span>Funnels deployed</span></div>
+      </div>
+      <div class="trusted">
+        <span>Trusted by growth-focused teams</span>
+        <div class="trusted-logos">
+          <b>Studio Loom</b><b>Northfield</b><b>Verano Health</b><b>Kestrel & Co.</b>
+        </div>
+      </div>
+    </div>
+
+    <div class="mock-wrap">
+      <div class="mock-glow" aria-hidden="true"></div>
+      <div class="mock">
+        <div class="mock-bar">
+          <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+          <span class="mock-url">apexfunnel.app/dashboard</span>
+        </div>
+        <div class="mock-body">
+          <div class="mock-head"><h4>Live Funnel Performance</h4><b id="mockLive">Live</b></div>
+          <div class="mock-funnelbars">
+            <div class="mbar-row"><span>Awareness</span><div class="mbar-track"><div class="mbar-fill" data-w="100"></div></div><span>100%</span></div>
+            <div class="mbar-row"><span>Interest</span><div class="mbar-track"><div class="mbar-fill" data-w="62"></div></div><span>62%</span></div>
+            <div class="mbar-row"><span>Decision</span><div class="mbar-track"><div class="mbar-fill" data-w="29"></div></div><span>29%</span></div>
+            <div class="mbar-row"><span>Action</span><div class="mbar-track"><div class="mbar-fill" data-w="12"></div></div><span>12%</span></div>
+          </div>
+          <div class="mock-stats">
+            <div class="mstat up"><b>1,842</b><span>Leads / mo</span></div>
+            <div class="mstat up"><b>21.6%</b><span>Close rate</span></div>
+            <div class="mstat"><b>$118</b><span>Cost / lead</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VALUE PROP ================= -->
+<section class="band" id="value">
+  <div class="wrap">
+    <div class="band-head">
+      <span class="eyebrow">Why Apex</span>
+      <h2>One system. Every stage <span class="grad-text">covered.</span></h2>
+      <p>Most funnels leak at the handoff between stages. Apex is engineered end-to-end so every visitor is guided, never dropped.</p>
+    </div>
+    <div class="value-grid">
+      <div class="value-card">
+        <svg class="vicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <span class="vnum">01 / Capture</span>
+        <h3>High-intent lead capture</h3>
+        <p>A value-first opt-in that qualifies visitors before they ever see a price, so your list is warm from message one.</p>
+      </div>
+      <div class="value-card">
+        <svg class="vicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        <span class="vnum">02 / Nurture</span>
+        <h3>Automated follow-up</h3>
+        <p>Email and WhatsApp sequences pre-wired to move leads from curiosity to conviction without manual outreach.</p>
+      </div>
+      <div class="value-card">
+        <svg class="vicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 6L9 17l-5-5"/></svg>
+        <span class="vnum">03 / Convert</span>
+        <h3>Frictionless checkout</h3>
+        <p>A decision page built on proof, urgency and clarity — designed to make "yes" the obvious next click.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FUNNEL STAGES ================= -->
+<section class="stages" id="stages">
+  <div class="wrap">
+    <div class="band-head">
+      <span class="eyebrow">The Architecture</span>
+      <h2>Four stages. <span class="grad-text">Zero drop-off.</span></h2>
+    </div>
+
+    <div class="funnel-stage" aria-hidden="true">
+      <div class="funnel-3d" id="funnel3d">
+        <div class="fring r1"></div>
+        <div class="fring r2"></div>
+        <div class="fring r3"></div>
+        <div class="fring r4"></div>
+        <div class="fring r5"></div>
+        <div class="fparticle" style="left:46%; animation-delay:0s;"></div>
+        <div class="fparticle" style="left:54%; animation-delay:.6s;"></div>
+        <div class="fparticle" style="left:50%; animation-delay:1.2s;"></div>
+        <div class="fparticle" style="left:44%; animation-delay:1.8s;"></div>
+      </div>
+    </div>
+
+    <div class="stage-row">
+      <div class="stage-num">01</div>
+      <div class="stage-copy">
+        <span class="eyebrow">Stage One</span>
+        <h3>Awareness</h3>
+        <p>You meet the stranger where they already are — ads, content, referrals — with a hook specific enough to stop the scroll.</p>
+        <div class="stage-tags"><span>Paid Ads</span><span>SEO Content</span><span>Referral</span></div>
+      </div>
+      <div class="stage-visual s1">
+        <div class="sv-bar"><span class="sv-dot"></span><span class="sv-dot"></span><span class="sv-dot"></span></div>
+        <div class="sv-body">
+          <div class="sv-metric"><b>48.2K</b><span>monthly reach</span></div>
+          <div class="sv-rows">
+            <i style="height:40%"></i><i style="height:65%"></i><i style="height:52%"></i><i style="height:80%"></i><i style="height:70%"></i><i style="height:95%"></i><i style="height:60%"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage-row">
+      <div class="stage-num">02</div>
+      <div class="stage-copy">
+        <span class="eyebrow">Stage Two</span>
+        <h3>Interest</h3>
+        <p>A lead magnet trades real value for an email or number — the moment a visitor becomes a contact you own.</p>
+        <div class="stage-tags"><span>Lead Magnet</span><span>Opt-in Page</span><span>Retargeting</span></div>
+      </div>
+      <div class="stage-visual s2">
+        <div class="sv-bar"><span class="sv-dot"></span><span class="sv-dot"></span><span class="sv-dot"></span></div>
+        <div class="sv-body">
+          <div class="sv-metric"><b>62%</b><span>opt-in rate</span></div>
+          <div class="sv-track"><div class="sv-fill" data-target style="--target-w:62%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage-row">
+      <div class="stage-num">03</div>
+      <div class="stage-copy">
+        <span class="eyebrow">Stage Three</span>
+        <h3>Decision</h3>
+        <p>Proof, testimonials and a clear offer remove every remaining objection standing between interest and intent.</p>
+        <div class="stage-tags"><span>Social Proof</span><span>Offer Stack</span><span>Urgency</span></div>
+      </div>
+      <div class="stage-visual s3">
+        <div class="sv-bar"><span class="sv-dot"></span><span class="sv-dot"></span><span class="sv-dot"></span></div>
+        <div class="sv-body">
+          <div class="sv-metric"><b>29%</b><span>qualified to buy</span></div>
+          <div class="sv-track"><div class="sv-fill" data-target style="--target-w:29%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage-row">
+      <div class="stage-num">04</div>
+      <div class="stage-copy">
+        <span class="eyebrow">Stage Four</span>
+        <h3>Action</h3>
+        <p>A one-click checkout and instant confirmation turn a decision into a customer — and into your next case study.</p>
+        <div class="stage-tags"><span>Checkout</span><span>Confirmation</span><span>Onboarding</span></div>
+      </div>
+      <div class="stage-visual s4">
+        <div class="sv-bar"><span class="sv-dot"></span><span class="sv-dot"></span><span class="sv-dot"></span></div>
+        <div class="sv-body">
+          <div class="sv-metric"><b>12%</b><span>close rate</span></div>
+          <div class="sv-track"><div class="sv-fill" data-target style="--target-w:12%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="band" id="features">
+  <div class="wrap">
+    <div class="band-head">
+      <span class="eyebrow">What's Included</span>
+      <h2>Built for brands that <span class="grad-text">can't afford to leak.</span></h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="7" height="13" rx="1"/><rect x="14" y="3" width="7" height="18" rx="1"/></svg></div><h3>Mobile-first pages</h3><p>Every stage renders flawlessly from a 5" screen to a 32" monitor.</p></div>
+      <div class="feat-card"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M8 15v4M12 9v10M16 5v14"/></svg></div><h3>Analytics built-in</h3><p>Track drop-off at every stage so you know exactly where to optimize.</p></div>
+      <div class="feat-card"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 01-8.9 8.4 8.5 8.5 0 01-4-1L3 20l1.1-5A8.4 8.4 0 0121 11.5z"/></svg></div><h3>WhatsApp ready</h3><p>Route hot leads straight into WhatsApp for instant, human follow-up.</p></div>
+      <div class="feat-card"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4M15 3h4a2 2 0 012 2v4M9 21H5a2 2 0 01-2-2v-4M15 21h4a2 2 0 002-2v-4"/></svg></div><h3>A/B test ready</h3><p>Swap headlines, offers and CTAs without touching a single line of structure.</p></div>
+      <div class="feat-card"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></div><h3>Fast by default</h3><p>Zero external dependencies means nothing to slow your load time down.</p></div>
+      <div class="feat-card"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 8l9 6 9-6"/></svg></div><h3>Email automation</h3><p>Pre-built sequences nurture leads while you focus on the business.</p></div>
+      <div class="feat-card"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.6 6.2L21 9l-5 4.4L17.4 21 12 17.3 6.6 21 8 13.4 3 9l6.4-.8z"/></svg></div><h3>Proof sections</h3><p>Testimonials and stats placed exactly where doubt tends to appear.</p></div>
+      <div class="feat-card"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4zM4 9h16M9 4v16"/></svg></div><h3>One-file deploy</h3><p>Upload a single HTML file — no build step, no server config.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="band" id="proof">
+  <div class="wrap">
+    <div class="band-head">
+      <span class="eyebrow">Social Proof</span>
+      <h2>Brands that stopped <span class="grad-text">guessing.</span></h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <svg class="quote-mark" viewBox="0 0 24 24" fill="currentColor"><path d="M7 7c-2.5 1.5-4 4-4 7 0 2.2 1.8 4 4 4s4-1.8 4-4c0-1.8-1.2-3.3-3-3.8C8.3 8 9.3 6.7 11 6l-4-1zm10 0c-2.5 1.5-4 4-4 7 0 2.2 1.8 4 4 4s4-1.8 4-4c0-1.8-1.2-3.3-3-3.8 .3-2.2 1.3-3.5 3-4.2l-4-1z"/></svg>
+        <div class="stars">★★★★★</div>
+        <p>"We replaced three disconnected tools with one funnel. Our cost per customer dropped by a third in the first month."</p>
+        <div class="test-who"><div class="test-avatar"><i>MK</i></div><div><b>Maria Khan</b><span>Founder, Studio Loom</span></div></div>
+      </div>
+      <div class="test-card">
+        <svg class="quote-mark" viewBox="0 0 24 24" fill="currentColor"><path d="M7 7c-2.5 1.5-4 4-4 7 0 2.2 1.8 4 4 4s4-1.8 4-4c0-1.8-1.2-3.3-3-3.8C8.3 8 9.3 6.7 11 6l-4-1zm10 0c-2.5 1.5-4 4-4 7 0 2.2 1.8 4 4 4s4-1.8 4-4c0-1.8-1.2-3.3-3-3.8 .3-2.2 1.3-3.5 3-4.2l-4-1z"/></svg>
+        <div class="stars">★★★★★</div>
+        <p>"The decision-stage page alone paid for the entire build. Clear proof, clear offer, no distractions."</p>
+        <div class="test-who"><div class="test-avatar"><i>RA</i></div><div><b>Raza Ahmed</b><span>Growth Lead, Northfield</span></div></div>
+      </div>
+      <div class="test-card">
+        <svg class="quote-mark" viewBox="0 0 24 24" fill="currentColor"><path d="M7 7c-2.5 1.5-4 4-4 7 0 2.2 1.8 4 4 4s4-1.8 4-4c0-1.8-1.2-3.3-3-3.8C8.3 8 9.3 6.7 11 6l-4-1zm10 0c-2.5 1.5-4 4-4 7 0 2.2 1.8 4 4 4s4-1.8 4-4c0-1.8-1.2-3.3-3-3.8 .3-2.2 1.3-3.5 3-4.2l-4-1z"/></svg>
+        <div class="stars">★★★★★</div>
+        <p>"Launched in two days. Leads now land in WhatsApp automatically — our sales team just closes."</p>
+        <div class="test-who"><div class="test-avatar"><i>SB</i></div><div><b>Sana Baig</b><span>COO, Verano Health</span></div></div>
+      </div>
+    </div>
+
+    <div class="proof-strip">
+      <div><b data-count="3.4" data-suffix="×">0×</b><span>Conversion Lift</span></div>
+      <div><b data-count="210" data-suffix="+">0+</b><span>Funnels Live</span></div>
+      <div><b data-count="48" data-suffix=" hrs">0 hrs</b><span>Avg. Launch Time</span></div>
+      <div><b data-count="98" data-suffix="%">0%</b><span>Client Retention</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA / FORM ================= -->
+<section class="cta-band" id="get-started">
+  <div class="wrap">
+    <div class="cta-panel">
+      <div class="cta-inner">
+        <div>
+          <span class="eyebrow">Start Today</span>
+          <h2>Let's build the funnel your <span class="grad-text">offer deserves.</span></h2>
+          <p>Tell us where to reach you. We'll respond within one business day with next steps — no pitch, just a plan.</p>
+          <div class="cta-badges">
+            <div class="cta-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>No obligation</div>
+            <div class="cta-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Reply in 24 hrs</div>
+            <div class="cta-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Built in 48 hrs</div>
+          </div>
+        </div>
+
+        <form class="lead-form" id="leadForm">
+          <div class="field">
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" name="name" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="femail">Email Address</label>
+            <input type="email" id="femail" name="email" placeholder="you@company.com" required>
+          </div>
+          <div class="field">
+            <label for="fphone">WhatsApp Number</label>
+            <input type="tel" id="fphone" name="phone" placeholder="+92 3xx xxxxxxx">
+          </div>
+          <button type="submit" class="btn btn-primary">Request My Funnel
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess">✓ Thanks — we've received your details and will be in touch shortly.</div>
+          <p class="form-note">No spam. Your details are used only to contact you about this request.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">
+          <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
+            <path d="M4 5H28L20 16V26L12 22V16L4 5Z" fill="url(#footGrad)" stroke="#f8e2ab" stroke-width="1" stroke-linejoin="round"/>
+            <defs><linearGradient id="footGrad" x1="4" y1="5" x2="28" y2="26" gradientUnits="userSpaceOnUse"><stop stop-color="#f8e2ab"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+          </svg>
+          Apex<span>Funnel</span>
+        </div>
+        <p>A premium four-stage conversion system for brands that want every visitor guided, not gambled on.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Navigate</h4>
+        <a href="#value">Overview</a>
+        <a href="#stages">The Funnel</a>
+        <a href="#features">Features</a>
+        <a href="#proof">Results</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="mailto:apexfunnel.agency@gmail.com">apexfunnel.agency@gmail.com</a>
+        <a href="https://wa.me/923001234567" target="_blank" rel="noopener">WhatsApp Us</a>
+        <a href="#get-started">Book a Demo</a>
+      </div>
+      <div class="foot-col">
+        <h4>Follow</h4>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 13v4"/></svg></a>
+          <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Apex Funnel. All rights reserved.</span>
+      <span>Built as a single, dependency-free HTML file.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var nav = document.getElementById('siteNav');
+  var progressBar = document.getElementById('scrollProgress');
+  function onScroll(){
+    if(window.scrollY > 40){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+    var h = document.documentElement;
+    var scrolled = (h.scrollTop || document.body.scrollTop);
+    var height = h.scrollHeight - h.clientHeight;
+    var pct = height > 0 ? (scrolled / height) * 100 : 0;
+    if(progressBar) progressBar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  var burger = document.getElementById('burger');
+  var drawer = document.getElementById('drawer');
+  burger.addEventListener('click', function(){
+    burger.classList.toggle('open');
+    drawer.classList.toggle('open');
+  });
+  drawer.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ burger.classList.remove('open'); drawer.classList.remove('open'); });
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var id = link.getAttribute('href');
+      if(id.length < 2) return;
+      var target = document.querySelector(id);
+      if(!target) return;
+      e.preventDefault();
+      var offset = 84;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({top: top, behavior:'smooth'});
+    });
+  });
+
+  // scroll-reveal for hero
+  var heroCopy = document.querySelector('.hero-copy');
+  var mockWrapEl = document.querySelector('.mock-wrap');
+  requestAnimationFrame(function(){
+    setTimeout(function(){
+      if(heroCopy) heroCopy.classList.add('in-view');
+      if(mockWrapEl) mockWrapEl.classList.add('in-view');
+    }, 80);
+  });
+
+  // scroll-reveal for stage rows + feature cards
+  var revealTargets = document.querySelectorAll('.stage-row, .feat-card');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('in-view'); io.unobserve(entry.target); }
+      });
+    }, {threshold:.2});
+    revealTargets.forEach(function(r){ io.observe(r); });
+  } else {
+    revealTargets.forEach(function(r){ r.classList.add('in-view'); });
+  }
+
+  // animate dashboard bars once visible
+  var mockBars = document.querySelectorAll('.mbar-fill');
+  var mockDone = false;
+  var mockObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting && !mockDone){
+        mockDone = true;
+        mockBars.forEach(function(bar){ bar.style.width = bar.dataset.w + '%'; });
+      }
+    });
+  }, {threshold:.3});
+  var mockEl = document.querySelector('.mock');
+  if(mockEl) mockObs.observe(mockEl);
+
+  // animated stat counters (hero + proof strip)
+  function animateCount(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    var suffix = el.getAttribute('data-suffix') || '';
+    var isDecimal = String(target).indexOf('.') !== -1;
+    var dur = 1400, start = null;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = target * eased;
+      el.textContent = (isDecimal ? val.toFixed(1) : Math.round(val)) + suffix;
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var counters = document.querySelectorAll('[data-count]');
+  if('IntersectionObserver' in window && counters.length){
+    var cObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ animateCount(entry.target); cObs.unobserve(entry.target); }
+      });
+    }, {threshold:.6});
+    counters.forEach(function(c){ cObs.observe(c); });
+  }
+
+  // parallax tilt on hero dashboard mockup
+  var mockWrap = document.querySelector('.mock-wrap');
+  var mockCard = document.querySelector('.mock');
+  if(mockWrap && mockCard && window.matchMedia('(hover: hover)').matches){
+    mockWrap.addEventListener('mousemove', function(e){
+      var rect = mockWrap.getBoundingClientRect();
+      var x = (e.clientX - rect.left) / rect.width - 0.5;
+      var y = (e.clientY - rect.top) / rect.height - 0.5;
+      mockCard.style.transform = 'rotateY(' + (-12 + x*10) + 'deg) rotateX(' + (5 - y*8) + 'deg) rotateZ(1deg)';
+    });
+    mockWrap.addEventListener('mouseleave', function(){
+      mockCard.style.transform = 'rotateY(-12deg) rotateX(5deg) rotateZ(1deg)';
+    });
+  }
+
+  // parallax tilt on 3D funnel
+  var funnelStage = document.querySelector('.funnel-stage');
+  var funnel3d = document.getElementById('funnel3d');
+  if(funnelStage && funnel3d && window.matchMedia('(hover: hover)').matches){
+    funnelStage.addEventListener('mousemove', function(e){
+      var rect = funnelStage.getBoundingClientRect();
+      var x = (e.clientX - rect.left) / rect.width - 0.5;
+      var y = (e.clientY - rect.top) / rect.height - 0.5;
+      funnel3d.style.transform = 'rotateX(' + (58 + y*10) + 'deg) rotateZ(' + (-34 + x*14) + 'deg)';
+    });
+    funnelStage.addEventListener('mouseleave', function(){
+      funnel3d.style.transform = 'rotateX(58deg) rotateZ(-34deg)';
+    });
+  }
+
+  // ---- generic lead-form submit handler (used by both forms) ----
+  function wireForm(formId, successId){
+    var form = document.getElementById(formId);
+    var success = document.getElementById(successId);
+    if(!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      // ------------------------------------------------------------
+      // INTEGRATION HOOKS — uncomment / customize whichever you use.
+      // ------------------------------------------------------------
+      // 1) EMAIL via mailto:
+      // var subject = encodeURIComponent('New Apex Funnel Lead');
+      // window.location.href = 'mailto:apexfunnel.agency@gmail.com?subject=' + subject;
+
+      // 2) WHATSAPP redirect:
+      // window.open('https://wa.me/923001234567?text=' + encodeURIComponent('Hi, new lead from Apex Funnel form.'), '_blank');
+
+      // 3) YOUR OWN BACKEND:
+      // fetch('https://your-backend.com/leads', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
+
+      success.style.display = 'block';
+      form.reset();
+      setTimeout(function(){ success.style.display = 'none'; }, 6000);
+      // auto-close modal after a successful submit
+      if(formId === 'modalLeadForm'){
+        setTimeout(closeLeadModal, 1600);
+      }
+    });
+  }
+  wireForm('leadForm', 'formSuccess');
+  wireForm('modalLeadForm', 'modalFormSuccess');
+
+  // ---- lead popup modal open/close ----
+  var overlay = document.getElementById('leadModalOverlay');
+  var modalCloseBtn = document.getElementById('leadModalClose');
+  var lastFocused = null;
+
+  function openLeadModal(){
+    lastFocused = document.activeElement;
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    var firstInput = document.getElementById('mfname');
+    if(firstInput) setTimeout(function(){ firstInput.focus(); }, 250);
+  }
+  function closeLeadModal(){
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    if(lastFocused) lastFocused.focus();
+  }
+  ['openLeadModalNav','openLeadModalDrawer','openLeadModalSticky'].forEach(function(id){
+    var btn = document.getElementById(id);
+    if(btn) btn.addEventListener('click', function(){
+      if(id === 'openLeadModalDrawer'){ burger.classList.remove('open'); drawer.classList.remove('open'); }
+      openLeadModal();
+    });
+  });
+  modalCloseBtn.addEventListener('click', closeLeadModal);
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) closeLeadModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && overlay.classList.contains('open')) closeLeadModal(); });
+
+  // ---- mobile sticky CTA: show after hero, hide once footer CTA is in view ----
+  var stickyCta = document.getElementById('stickyCta');
+  var getStartedSection = document.getElementById('get-started');
+  var getStartedInView = false;
+  if(stickyCta){
+    var showAfter = window.innerHeight * 0.6;
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > showAfter && !getStartedInView){ stickyCta.classList.add('show'); }
+      else { stickyCta.classList.remove('show'); }
+    }, {passive:true});
+    if(getStartedSection && 'IntersectionObserver' in window){
+      var s2 = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          getStartedInView = entry.isIntersecting;
+          if(entry.isIntersecting) stickyCta.classList.remove('show');
+        });
+      }, {threshold:.15});
+      s2.observe(getStartedSection);
+    }
+  }
+
+})();
+</script>
+</body>
+</html>
